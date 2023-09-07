@@ -1,5 +1,5 @@
 ﻿using ElevatorEngine.Domain.Interfaces;
-namespace ElevatorEngine.Infrastructure.Data {
+namespace ElevatorSystem.Infrastructure.Data {
     public class UnitOfWork : IUnitOfWork {
         private readonly ApplicationDbContext _context;
         public UnitOfWork(ApplicationDbContext context) {
