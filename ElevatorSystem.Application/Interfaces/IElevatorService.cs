@@ -15,5 +15,6 @@ namespace ElevatorSystem.Application.Interfaces {
         Task<IEnumerable<ElevatorDTO>> GetAllElevatorStatusesAsync();
         Task<ElevatorDTO> GetNearestAvailableElevatorAsync(int floorId, ElevatorDirection direction);
         Task SendNearestElevatorToFloorAsync(int floorNumber, ElevatorDirection direction);
+       
     }
 }

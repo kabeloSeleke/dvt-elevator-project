@@ -1,4 +1,5 @@
 ﻿
+using ElevatorEngine.Application.Interfaces;
 using ElevatorEngine.Domain.Interfaces;
 using ElevatorSystem.Application.Interfaces;
 using ElevatorSystem.Application.Mapper;
@@ -18,6 +19,7 @@ namespace ElevatorSystem.ConsoleApp {
             using IHost host = CreateHostBuilder(args).Build();
             var services = host.Services;
             var elevatorService = services.GetRequiredService<IElevatorService>();
+            var floorService = services.GetRequiredService<IFloorService>();
 
             host.Run();
         }
@@ -37,9 +39,9 @@ namespace ElevatorSystem.ConsoleApp {
                services.AddScoped<IUnitOfWork, UnitOfWork>();
                services.AddAutoMapper(typeof(Startup));
                services.AddAutoMapper(typeof(MappingProfile).Assembly);
-
+               services.AddScoped<IFloorService, FloorService>();
                services.AddScoped<IElevatorService, ElevatorService>();
-
+               services.AddTransient<IElevatorOrchestratorService, ElevatorOrchestratorService>();
            });
     }
 }
