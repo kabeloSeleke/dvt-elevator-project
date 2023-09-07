@@ -1,5 +1,5 @@
 ﻿using ElevatorSystem.Domain.Values;   
-namespace ElevatorEngine.Application.Interfaces {
+namespace ElevatorSystem.Application.Interfaces {
     public interface IElevatorOrchestratorService {
         Task RequestElevatorToFloorAsync(int floorId, int numOfPeople, ElevatorDirection direction);
     }

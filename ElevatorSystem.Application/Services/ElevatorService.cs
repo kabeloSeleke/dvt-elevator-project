@@ -6,7 +6,6 @@ using ElevatorSystem.Domain.Interfaces;
 using ElevatorSystem.Domain.Models;
 using ElevatorSystem.Domain.Values;
 using Microsoft.Extensions.Logging;
-using System;
 
 namespace ElevatorSystem.Application.Services  {
     public class ElevatorService : IElevatorService {

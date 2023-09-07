@@ -1,9 +1,10 @@
 ﻿
-using ElevatorEngine.Application.Interfaces;
+using ElevatorSystem.Application.Interfaces;
 using ElevatorEngine.Domain.Interfaces;
 using ElevatorSystem.Application.Interfaces;
 using ElevatorSystem.Application.Mapper;
 using ElevatorSystem.Application.Services;
+using ElevatorSystem.ConsoleApp.Utilities;
 using ElevatorSystem.Domain.Interfaces;
 using ElevatorSystem.Infrastructure.Data;
 using ElevatorSystem.Infrastructure.Repositories;
@@ -20,7 +21,8 @@ namespace ElevatorSystem.ConsoleApp {
             var services = host.Services;
             var elevatorService = services.GetRequiredService<IElevatorService>();
             var floorService = services.GetRequiredService<IFloorService>();
-
+            var simulationManager = services.GetRequiredService<SimulationManager>();
+             simulationManager.StartAsync();
             host.Run();
         }
 
@@ -42,6 +44,7 @@ namespace ElevatorSystem.ConsoleApp {
                services.AddScoped<IFloorService, FloorService>();
                services.AddScoped<IElevatorService, ElevatorService>();
                services.AddTransient<IElevatorOrchestratorService, ElevatorOrchestratorService>();
+               services.AddSingleton<SimulationManager>();
            });
     }
 }
