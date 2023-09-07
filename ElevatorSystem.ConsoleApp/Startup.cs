@@ -47,4 +47,4 @@ namespace ElevatorSystem.ConsoleApp {
                services.AddSingleton<SimulationManager>();
            });
     }
-}
+ }

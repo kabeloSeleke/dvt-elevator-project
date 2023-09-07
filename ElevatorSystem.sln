@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F9A3EF10
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6D063261-2EC5-4143-AF28-3E97E538A095}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{AE7648FB-2563-4029-813A-188964A85FA5}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Domain", "ElevatorSystem.Domian\ElevatorSystem.Domain.csproj", "{C46617EF-8253-43D4-8C40-292E81A3149A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Infrastructure", "ElevatorSystem.Infrastructure\ElevatorSystem.Infrastructure.csproj", "{AB57A372-F836-41DE-B1D1-5D0CF396376B}"
@@ -25,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.ConsoleApp",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Application", "ElevatorSystem.Application\ElevatorSystem.Application.csproj", "{72565687-EC0D-4ED2-8D47-C468D19DF626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevatorSystem.Tests", "ElevatorSystem.Tests\ElevatorSystem.Tests.csproj", "{615F9D13-850E-4425-A9C6-F948676D4E3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Tests", "ElevatorSystem.Tests\ElevatorSystem.Tests.csproj", "{615F9D13-850E-4425-A9C6-F948676D4E3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
