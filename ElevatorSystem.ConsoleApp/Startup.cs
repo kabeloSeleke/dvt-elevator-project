@@ -1,5 +1,6 @@
 ﻿
 using ElevatorEngine.Domain.Interfaces;
+using ElevatorSystem.Application.Mapper;
 using ElevatorSystem.Domain.Interfaces;
 using ElevatorSystem.Infrastructure.Data;
 using ElevatorSystem.Infrastructure.Repositories;
@@ -25,14 +26,18 @@ namespace ElevatorSystem.ConsoleApp {
                config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
            })
            .ConfigureServices((hostContext, services) => {
+              
                services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(hostContext.Configuration.GetConnectionString("ElevatorConnection")));
               
                services.AddTransient<IFloorRepository, FloorRepository>();
                services.AddTransient<IElevatorRepository, ElevatorRepository>();
                services.AddScoped<IUnitOfWork, UnitOfWork>();
-              
-             
+               services.AddAutoMapper(typeof(Startup));
+               services.AddAutoMapper(typeof(MappingProfile).Assembly);
+
+
+
            });
     }
 }
