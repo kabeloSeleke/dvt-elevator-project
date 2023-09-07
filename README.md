@@ -1,7 +1,3 @@
-Certainly! Here's a README.md for your Elevator System project based on the code and discussions we've had:
-
----
-
 # Elevator System
 
 A simulation of an elevator system designed to move people as efficiently as possible. This system provides a console application interface to interact with elevators, view their status, and request their services.
