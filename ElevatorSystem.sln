@@ -17,13 +17,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6D063261-2EC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{AE7648FB-2563-4029-813A-188964A85FA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Domian", "ElevatorSystem.Domian\ElevatorSystem.Domian.csproj", "{C46617EF-8253-43D4-8C40-292E81A3149A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Domain", "ElevatorSystem.Domian\ElevatorSystem.Domain.csproj", "{C46617EF-8253-43D4-8C40-292E81A3149A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Infrastructure", "ElevatorSystem.Infrastructure\ElevatorSystem.Infrastructure.csproj", "{AB57A372-F836-41DE-B1D1-5D0CF396376B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.ConsoleApp", "ElevatorSystem.ConsoleApp\ElevatorSystem.ConsoleApp.csproj", "{3C8E98D1-1BA1-4D2A-ADCF-E294CFB4C0E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElevatorSystem.Application", "ElevatorSystem.Application\ElevatorSystem.Application.csproj", "{72565687-EC0D-4ED2-8D47-C468D19DF626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevatorSystem.Tests", "ElevatorSystem.Tests\ElevatorSystem.Tests.csproj", "{615F9D13-850E-4425-A9C6-F948676D4E3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{72565687-EC0D-4ED2-8D47-C468D19DF626}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72565687-EC0D-4ED2-8D47-C468D19DF626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72565687-EC0D-4ED2-8D47-C468D19DF626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{615F9D13-850E-4425-A9C6-F948676D4E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615F9D13-850E-4425-A9C6-F948676D4E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615F9D13-850E-4425-A9C6-F948676D4E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615F9D13-850E-4425-A9C6-F948676D4E3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{AB57A372-F836-41DE-B1D1-5D0CF396376B} = {5DCB52EC-4B1B-48A4-8C96-9DA3BD0372A8}
 		{3C8E98D1-1BA1-4D2A-ADCF-E294CFB4C0E8} = {E9CC97B3-AFE6-423B-957D-7EE61BE460A5}
 		{72565687-EC0D-4ED2-8D47-C468D19DF626} = {34B8A1A0-53DB-4BF5-B023-9F4438FBBA95}
+		{615F9D13-850E-4425-A9C6-F948676D4E3E} = {F9A3EF10-F588-47D5-80D7-3F421FA47C4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6659C80-77C2-42A7-866C-609B8D0C9181}
