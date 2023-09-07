@@ -1,6 +1,8 @@
 ﻿
 using ElevatorEngine.Domain.Interfaces;
+using ElevatorSystem.Application.Interfaces;
 using ElevatorSystem.Application.Mapper;
+using ElevatorSystem.Application.Services;
 using ElevatorSystem.Domain.Interfaces;
 using ElevatorSystem.Infrastructure.Data;
 using ElevatorSystem.Infrastructure.Repositories;
@@ -15,8 +17,8 @@ namespace ElevatorSystem.ConsoleApp {
         public static void Main(string[] args) {
             using IHost host = CreateHostBuilder(args).Build();
             var services = host.Services;
-          
-         
+            var elevatorService = services.GetRequiredService<IElevatorService>();
+
             host.Run();
         }
 
@@ -36,7 +38,7 @@ namespace ElevatorSystem.ConsoleApp {
                services.AddAutoMapper(typeof(Startup));
                services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
-
+               services.AddScoped<IElevatorService, ElevatorService>();
 
            });
     }
