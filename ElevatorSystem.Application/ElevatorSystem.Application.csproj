@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ElevatorSystem.Domian\ElevatorSystem.Domain.csproj" />
+    <ProjectReference Include="..\ElevatorSystem.Infrastructure\ElevatorSystem.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

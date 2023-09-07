@@ -1,5 +1,9 @@
 ﻿
+using ElevatorEngine.Application.Interfaces;
 using ElevatorEngine.Domain.Interfaces;
+using ElevatorSystem.Application.Interfaces;
+using ElevatorSystem.Application.Mapper;
+using ElevatorSystem.Application.Services;
 using ElevatorSystem.Domain.Interfaces;
 using ElevatorSystem.Infrastructure.Data;
 using ElevatorSystem.Infrastructure.Repositories;
@@ -14,8 +18,9 @@ namespace ElevatorSystem.ConsoleApp {
         public static void Main(string[] args) {
             using IHost host = CreateHostBuilder(args).Build();
             var services = host.Services;
-          
-         
+            var elevatorService = services.GetRequiredService<IElevatorService>();
+            var floorService = services.GetRequiredService<IFloorService>();
+
             host.Run();
         }
 
@@ -25,14 +30,18 @@ namespace ElevatorSystem.ConsoleApp {
                config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
            })
            .ConfigureServices((hostContext, services) => {
+              
                services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(hostContext.Configuration.GetConnectionString("ElevatorConnection")));
               
                services.AddTransient<IFloorRepository, FloorRepository>();
                services.AddTransient<IElevatorRepository, ElevatorRepository>();
                services.AddScoped<IUnitOfWork, UnitOfWork>();
-              
-             
+               services.AddAutoMapper(typeof(Startup));
+               services.AddAutoMapper(typeof(MappingProfile).Assembly);
+               services.AddScoped<IFloorService, FloorService>();
+               services.AddScoped<IElevatorService, ElevatorService>();
+               services.AddTransient<IElevatorOrchestratorService, ElevatorOrchestratorService>();
            });
     }
 }
